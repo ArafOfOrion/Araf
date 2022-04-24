@@ -127,9 +127,9 @@ function ChatWindow(props) {
             id: getUserId()
         },
         headers: {
-            Authorization: 'dLln1jT3TMYh',
+            Authorization: '', // API Authorization token here
             'X-RapidAPI-Host': 'random-stuff-api.p.rapidapi.com',
-            'X-RapidAPI-Key': '4090c6fca9msh39848f9c6ead32cp14a3efjsn807d595a6a34',
+            'X-RapidAPI-Key': '', // API key here
             useQueryString: true
         }
         };
