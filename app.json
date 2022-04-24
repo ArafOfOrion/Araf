@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Araf",
+    "slug": "Araf",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/Araf.png",
+    "splash": {
+      "image": "./assets/Splash-Screen.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Araf.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/Araf.png"
+    }
+  },
+  "userid": null
+}
