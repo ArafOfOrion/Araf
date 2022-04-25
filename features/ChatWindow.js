@@ -1,5 +1,5 @@
 import { React, useState, useRef } from 'react';
-import { Alert, ScrollView, SafeAreaView, Text, StyleSheet, TextInput, TouchableHighlight, Image } from 'react-native'; 
+import { Alert, ScrollView, Dimensions, SafeAreaView, Text, StyleSheet, TextInput, TouchableHighlight, Image } from 'react-native'; 
 import getCookie from './files/Cookies';
 
 function generateId() {
@@ -12,6 +12,7 @@ function generateId() {
     return str;
   }
 
+const { width, height } = Dimensions.get('window');
 const cookie = getCookie();
 const userid = cookie.get("userid");
 if (userid == undefined) {
@@ -34,7 +35,6 @@ function ChatWindow(props) {
         bottomSafeAreaView: {
             flex: 1,
             alignItems: 'center',
-            justifyContent: 'center',
             position: 'absolute', 
             top: '93%', 
             left: '2%',
@@ -45,7 +45,7 @@ function ChatWindow(props) {
         },
         userMessageTextInput:  {
             height: 40,
-            width: 300,
+            width: width / 1.2,
             borderColor: isTextInputFocused == true ? "blue" : "gray",
             alignItems: 'center', 
             borderWidth: 1,
@@ -56,7 +56,7 @@ function ChatWindow(props) {
         sendButton: { 
             marginLeft: 5,
             height: 40,
-            width: 40
+            width: 40,
         },
         usersMessage: {
             backgroundColor: "#3386ff",
@@ -127,9 +127,9 @@ function ChatWindow(props) {
             id: getUserId()
         },
         headers: {
-            Authorization: '', // API Authorization token here
+            Authorization: '', // Random Stuff Api authorization token
             'X-RapidAPI-Host': 'random-stuff-api.p.rapidapi.com',
-            'X-RapidAPI-Key': '', // API key here
+            'X-RapidAPI-Key': '', // Rapid APi key
             useQueryString: true
         }
         };
